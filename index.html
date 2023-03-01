@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+  <title>Carpe--Diem</title>
+</head>
+
+<body>
+
+  <div class="for-mobile-only">This Website Is For Mobile Only</div>
+  <main class="main__page">
+    <header class="main__header">
+      <h1 class="main__logo">CARPE DIEM</h1>
+      <span class="about-us">Hi</span>
+      <div class="tooltip">Thanks for visiting! <br>:)</div>
+    </header>
+    <div class="quote-container">
+      <div id="quote"></div>
+    </div>
+
+    <div class="design-section">
+      <div class="designs-title reveal">
+        <h2>OUR GALLERY</h2>
+        <h5>Recent Designs</h5>
+      </div>
+      <div class="design-images">
+        <img class="reveal" src="./assets/designs/apparel/CarpeDiemCropT.jpg" alt="">
+        <img class="reveal" src="./assets/designs/apparel/CarpeDiemSports.jpg" alt="">
+        <img class="reveal" src="./assets/designs/apparel/HoodieBackWhite.jpg" alt="">
+        <img class="reveal" src="./assets/designs/apparel/HoodieFrontWhite.jpg" alt="">
+        <img class="reveal" src="./assets/designs/apparel/HoodieFrontB;ack.jpg" alt="">
+        <img class="reveal" src="./assets/designs/apparel/HoodieFrontBlack.jpg" alt="">
+        <img class="reveal" src="./assets/designs/apparel/NA-FrontHoodie.jpg" alt="">
+        <img class="reveal"
+          src="./assets/designs/apparel/valentine-s-day-mockup-of-a-playful-girl-wearing-a-tee-25421.png" alt="">
+        <img class="reveal" src="./assets/designs/apparel/WhiteShirts.jpg" alt="">
+        <img class="reveal" src="./assets/designs/apparel/WhiteShirtsFolded.jpg" alt="">
+
+        <img class="reveal" src="./assets/designs/other/CapediemBook.jpg" alt="">
+        <img class="reveal" src="./assets/designs/other/CarpeDiemCase.jpg " alt="">
+        <img class="reveal" src="./assets/designs/other/CarpeDiemMagazine.jpg" alt="">
+        <img class="reveal" src="./assets/designs/other/CarpeDiemMazanie2.jpg" alt="">
+        <img class="reveal" src="./assets/designs/other/CarpeDiemMug.jpg" alt="">
+        <img class="reveal" src="./assets/designs/other/CarpeDiemPillow.jpg" alt="">
+        <img class="reveal" src="./assets/designs/other/CarpeDiemPouch.jpg" alt="">
+        <img class="reveal" src="./assets/designs/other/NA-toteBagBlack.jpg" alt="">
+        <img class="reveal" src="./assets/designs/other/STD-toteBag.jpg" alt="">
+
+        <img class="reveal" src="./assets/designs/Home/CarpeDiemBlinds.jpg" alt="">
+        <img class="reveal" src="./assets/designs/Home/CarpeDiemStandPoster.jpg" alt="">
+        <img class="reveal" src="./assets/designs/Home/STD-Wallpaper.jpg" alt="">
+      </div>
+    </div>
+
+    <footer class="main__footer">© 2023, Carpe Diem
+      <span>This website is not finished yet.</span>
+    </footer>
+
+  </main>
+
+
+  <script>
+
+    var quotes = ["'Live as if you were to die tomrrow. Learn as if you were to live forever' - Mahatma Gandhi", " 'Forever is composed of nows.' -Emily Dickson", " 'Yeasterday is gone. Tomorrow has not yet come. We have only today. Let us begin' -Mother Theresa", " 'Life is either a darling adventure or nothing at all.' - Helen Keller"];
+
+    var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+    document.getElementById("quote").innerHTML = randomQuote;
+
+    window.onload = function () {
+      var quotes = ["'Live as if you were to die tomrrow. Learn as if you were to live forever' - Mahatma Gandhi", " 'Forever is composed of nows.' -Emily Dickson", " 'Yeasterday is gone. Tomorrow has not yet come. We have only today. Let us begin' -Mother Theresa", " 'Life is either a darling adventure or nothing at all.' - Helen Keller"
+      ];
+
+      var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+      document.getElementById("quote").innerHTML = randomQuote;
+    }
+
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+
+
+
+  </script>
+
+</body>
+
+</html>
